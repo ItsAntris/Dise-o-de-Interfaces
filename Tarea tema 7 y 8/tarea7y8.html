@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, 
+              #110028, 
+              #07000f
+            );
+            color: #fff;
+            font-family: "Lucida Console", Monaco, monospace;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        video {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            max-width: 80%;
+            height: auto;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        #muteButton {
+            background-color: #28a745;
+        }
+
+        #muteButton:hover {
+            background-color: #218838;
+        }
+
+        #color{
+            color: black;
+        }
+    </style>
+    <title>Tarea</title>
+</head>
+<body>
+    <!-- Botón para iniciar el video -->
+    <button onclick="playVideo()" data-toggle="tooltip" title="Reproducir video">Reproducir Video</button>
+
+    <!-- Contenedor del video -->
+    <div class="video-container">
+        <video id="video" controls poster="/Images/portada.jpg" preload="metadata">
+            <source src="/Images/gato.mp4" type="video/mp4">
+            <source src="/Images/gato.ogg" type="video/ogg">
+            <source src="/Images/gato.webm" type="video/webm">
+            Tu navegador no soporta el video en HTML5.
+        </video>
+    </div>
+
+    <!-- Audio con reproducción automática y en bucle -->
+    <audio id="audio" controls autoplay loop>
+        <source src="/Images/audio.mp3" type="audio/mp3">
+        <source src="/Images/audio.ogg" type="audio/ogg">
+        Tu navegador no soporta el audio en HTML5.
+    </audio>
+    
+    <!-- Botón para silenciar/activar sonido -->
+    <button onclick="toggleMute()" id="muteButton" data-toggle="tooltip" title="Silenciar/Activar sonido">🔇</button>
+
+    <!-- Collapse para información multimedia adicional -->
+    <div class="accordion" id="infoAccordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Información Adicional
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#infoAccordion">
+                <div class="card-body" id="color">
+                    Este apartado del portfolio es para la actividad de los temas 7 y 8.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Función para reproducir el video
+        function playVideo() {
+            const video = document.getElementById("video");
+            video.style.display = "block";
+            video.play();
+        }
+
+        // Función para silenciar o activar el audio
+        function toggleMute() {
+            const audio = document.getElementById("audio");
+            const button = document.getElementById("muteButton");
+
+            if (audio.muted) {
+                audio.muted = false;
+                button.textContent = "🔇";
+            } else {
+                audio.muted = true;
+                button.textContent = "🔊";
+            }
+        }
+
+        // Inicializar tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+</html>

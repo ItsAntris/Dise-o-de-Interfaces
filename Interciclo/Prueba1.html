@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="estilos.css"> 
+    <title>Prueba 1</title>
+    <style>
+        #fullscreen-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            z-index: 9999;
+        }
+        #imagen-final {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="titulo">
+        <h2>¡TIENES 3 INTENTOS PARA ENCONTRAR UNA PAREJA DE OBJETOS!</h2>
+    </div>
+
+    <br>
+    <div id="contenedor-imagen">
+        <img src="Parejas.png" alt="Parejas" id="imagen">
+    </div>
+
+    <div id="contenedor-texto">
+    <textarea name="texto" id="texto"></textarea>
+    </div>
+    <br>
+    <div id="contenedor-boton">
+        <button class="button" id="enviar" onclick="comprobar()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Comprobar
+        </button>
+    </div>
+
+    <video id="fullscreen-video" autoplay muted>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Imagen grande que aparece cuando se acaban los intentos -->
+    <img id="imagen-final" src="risa.png" alt="¡Juego terminado!">
+
+    <script>
+        let intentos = 3;
+        function comprobar() {
+            let enviado = document.getElementById("texto").value
+                .trim()
+                .replace(/\s+/g, "");
+
+            let resultado = ["tinder", "TINDER", "Tinder"];
+
+            const fallo = new Audio("risa.mp3");
+            const mal = new Audio("mal.mp3");
+
+
+            if (intentos > 1) {
+                if (resultado.includes(enviado)) {
+                    const acierto = new Audio("acierto.mp3");
+                    acierto.play();
+                    setTimeout(() => {
+                        showVideo();
+                        document.getElementById("texto").value = "";
+                    }, 100);
+                } else {
+                    intentos--;
+                    mal.play();
+                    setTimeout(() => {
+                        alert("Mira bien capullo, te quedan " + intentos + " intentos");
+                        document.getElementById("texto").value = "";
+                    }, 100);
+                }
+            } else {
+                fallo.play();
+                setTimeout(() => {
+                    document.getElementById("texto").value = "";
+                    mostrarImagenFinal();
+                }, 100);
+            }
+        }
+
+        function showVideo() {
+            let video = document.getElementById("fullscreen-video");
+            video.style.display = "block";
+            video.muted = false;
+            video.play();
+        }
+
+        function mostrarImagenFinal() {
+            let imagenFinal = document.getElementById("imagen-final");
+            imagenFinal.style.display = "block"; // Mostrar la imagen
+        }
+
+        document.getElementById("fullscreen-video").addEventListener('ended', function() {
+            this.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>

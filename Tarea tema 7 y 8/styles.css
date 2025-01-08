@@ -1,0 +1,185 @@
+body {
+    height: 100%;  /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0;      /* Elimina cualquier margen predeterminado */
+    background: linear-gradient(to bottom, 
+      #110028,  /* Color en la parte superior */
+      #07000f   /* Color en la parte inferior */
+    );
+    color: #fff; /* Texto claro */
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+#cabecera{
+    margin-top: 1%;
+    font-size: 14px;
+    color: #68fa79;
+    background-color: #2e0366;
+    cursor: pointer;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #68fa79; /* Tomate */
+}
+
+#Inicio{
+    margin-top: 11%;
+}
+
+#perfil {
+    width: 50px;
+    height: auto;
+    font-size: 35px;
+}
+
+#Bio{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-size: 20px;
+}
+
+#Hey{
+    margin-top: 3%;
+}
+#Experiencia{
+    margin-top: 5%;
+}
+
+#conocimientos{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#svg{
+    padding-top: 2%;
+}
+
+#Trabajos{
+    margin-top: 5%;
+}
+#ProyectoTitulo{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#Proyecto{
+    margin-bottom: 5%;
+}
+
+#formulario{
+    margin-top: 4%;
+}
+
+#botonCustom{
+    margin-top: 3%;
+    margin-bottom: 8%;
+    border: 2px solid #68fa79; /* Color verde neón */
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 10px #68fa79, 0 0 40px #68fa79, 0 0 80px #68fa79;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #68fa79, 0 0 2px #68fa79, 0 0 5px #68fa79;
+    }
+    50% {
+        box-shadow: 0 0 20px #68fa79, 0 0 2px #68fa79, 0 0 5px #68fa79;
+    }
+    100% {
+        box-shadow: 0 0 10px #68fa79, 0 0 2px #68fa79, 0 0 5px #68fa79;
+    }
+}
+
+#color{
+    color: #68fa79;
+}
+
+#perfil {
+    width: 150px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#perfil:hover {
+    transform: scale(1.1);
+}
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-color: #68fa79;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+hr {
+    border: none; /* Eliminar el borde predeterminado */
+    height: 2px; /* Altura de la línea */
+    background-color: #68fa79; /* Color de la línea */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+footer {
+    color: #fff; /* Color de texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+}
+
+.footer-content {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.socials {
+    list-style: none; /* Eliminar el estilo de lista */
+    padding: 0; /* Eliminar el padding */
+}
+
+.socials li {
+    display: inline; /* Mostrar elementos en línea */
+    margin: 0 10px; /* Espaciado entre elementos */
+}
+
+.socials a {
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.socials a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
