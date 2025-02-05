@@ -1,0 +1,23 @@
+<h1>The Punisher</h1>
+<dl>
+  <dt>Nombre:</dt>
+  <dd>{{ name }}</dd>
+
+  <dt>Edad:</dt>
+  <dd>{{ age }}</dd>
+
+  <dt>Método:</dt>
+  <dd>{{default}}</dd>
+
+  <dt>Capitalizado</dt>
+  <dd>{{nombreMayus}}</dd>
+</dl>
+
+<div style="display: flex; gap: 10px;">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombre">
+  <button (click)="actualizarNombre()" type="button" class="btn btn-primary">Cambiar nombre</button>
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" [(ngModel)]="edad">
+  <button (click)="actualizarEdad()" type="button" class="btn btn-secondary">Cambiar edad</button>
+</div>
