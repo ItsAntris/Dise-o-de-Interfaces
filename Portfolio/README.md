@@ -1,59 +1,75 @@
-# Portfolio
+# Portfolio Personal 🌐
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Este es mi portfolio personal, desarrollado con **HTML**, **CSS** y **Bootstrap** para mostrar mi experiencia, proyectos y proporcionar un canal de contacto.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📄 Secciones del Portfolio  
+- **Inicio**  
+- **Experiencia Laboral**  
+- **Proyectos**  
+- **Sobre mí**  
+- **Contacto**  
+- **Footer**  
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🏠 Inicio  
+La página principal muestra una introducción breve sobre mí y enlaces rápidos a las distintas secciones del portfolio. Se ha diseñado con un enfoque limpio y profesional, utilizando animaciones para hacer la experiencia más interactiva.  
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 💼 Experiencia Laboral  
 
-```bash
-ng generate component component-name
-```
+- **Plataforma Femar S.L.**  
+  _Responsable de control de stock_  
+  - Comprobación del buen estado de la mercancía y su correcta documentación.  
+  - Registro de la mercancía recibida en el programa de gestión y eliminación de stock dañado o caducado.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Bodega San José S.L.**  
+  _Responsable de barra_  
+  - Gestión de cobros y correcto apunte de las comandas.  
+  - Servir bebidas y mantener un stock adecuado para las ventas esperadas.
 
-```bash
-ng generate --help
-```
+- **Asesortiz S.L.U.**  
+  _Prácticas de administración_  
+  - Realización de la contabilidad de empresas y autónomos, campaña de rentas y gestión de archivos.
 
-## Building
+---
 
-To build the project run:
+## 📂 Proyectos  
 
-```bash
-ng build
-```
+### 🔹 Pong  
+**Recreación del primer juego jamás creado, desarrollado en Java.**  
+[👉 Ver proyecto en GitHub](https://github.com/AntrisMedac/Pong.git)  
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 🔹 MyPoker  
+**Landing page de un casino, desarrollado con Bootstrap, JS, PHP, CSS y HTML.**  
+[👉 Ver proyecto en GitHub](https://github.com/AntrisMedac/Poker.git)  
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## ✍️ Sobre mí  
+Me apasiona el desarrollo web, especialmente en el área de back-end, donde disfruto creando soluciones eficientes y escalables. Mi experiencia laboral en entornos exigentes me ha permitido desarrollar habilidades para trabajar bajo presión y gestionar múltiples tareas con éxito. Estoy en constante aprendizaje y busco oportunidades para aplicar y ampliar mis conocimientos en proyectos reales.  
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 📧 Contacto  
+Formulario de contacto para que los visitantes puedan enviarme un mensaje directamente.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```html
+<form>
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" id="name" placeholder="Introduce tu nombre" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Correo electrónico</label>
+    <input type="email" class="form-control" id="email" placeholder="Introduce tu correo" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Mensaje</label>
+    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
