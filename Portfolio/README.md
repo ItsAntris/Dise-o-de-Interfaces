@@ -65,7 +65,7 @@ La página principal muestra una introducción breve sobre mí y enlaces rápido
 **Landing page de un casino, desarrollado con Bootstrap, JS, PHP, CSS y HTML.**  
 [👉 Ver proyecto en GitHub](https://github.com/AntrisMedac/Poker.git)  
 
-![Proyectos](/ImagenesReadme/4.png)
+![Proyectos](/public/ImagenesReadme/4.png)
 
 ---
 
